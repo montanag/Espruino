@@ -113,6 +113,9 @@ void jshSetDeviceInitialised(IOEventFlags device, bool isInit) {
 * interrupt handler for gpio interrupts
 */
 void IRAM_ATTR gpio_intr_handler(void* arg){
+  // Test code
+  jshPinOutput(27,1);
+  jshPinOutput(27,0);
   //GPIO intr process. Mainly copied from esp-idf
   UNUSED(arg);
   IOEventFlags exti;
